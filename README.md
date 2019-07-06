@@ -13,7 +13,8 @@ Other Worthy Doc Links:
 
 # Table of contents
 
-1. Python as a calculator - Numbers, Strings, Lists  
+1. Python as a calculator - Numbers, Strings, lists
+1. Floating Point Arithmetic: Issues and Limitations  
 1. Flow Control - If , for , functions etc..
 1. Data Structures - Lists, sets, Sequences, Dictionaries, etc
 1. Modules - packages, standard modules etc
