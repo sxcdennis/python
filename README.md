@@ -23,6 +23,6 @@ Other Worthy Doc Links:
 1. Standard Libraries- Wildcards, Operating System Interface, Dates and Times, Data Compression, etc..
 1. Standard Library Part 2 - Templating, Multi-threading, Logging ,Tools for working lists
 1. Virtual Environments and Packages
-1.  What now?
 1. Interactive Input Editing and History Substitutions
 1. Appendix- Interactive Mode, Error Handling, Executable Python scripts
+1.  What now?
