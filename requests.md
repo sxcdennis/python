@@ -1,0 +1,51 @@
+# Requests 
+Typically the requests module is used with json as well..
+When working with an API you will typically need a token ID/api key for authentication 
+Once you get that, you will need to run a get request to get an ID of something..
+
+Here is an example from pagerduty:
+```
+import requests
+
+url = "https://api.pagerduty.com/incidents"
+
+querystring = {"user_ids[]":"UIDHERE"}
+
+headers = {
+    'accept': "application/vnd.pagerduty+json;version=2",
+    'authorization': "Token token=y_NbAkKc66ryYTWUXYEu"
+    }
+
+response = requests.request("GET", url, headers=headers, params=querystring)
+
+print(response.text)
+```
+
+Once ran, you will get fields/payloads for example:
+```
+{
+  "incident": {
+    "title": "Your desk is on fire!",
+    "service": {
+      "id": "PW7YESS",
+      "type": "service_reference"
+    },
+    "assignments": [
+      {
+        "assignee": {
+          "id": "PZUVZZZ",
+          "type": "user_reference"
+        }
+      }
+    ]
+  }
+}
+```
+
+1. Now let's say you only want to print out the payload of the id under incident? How would you do that?
+1. Now let's run this in a loop- Let's say you have several incidents.. Not just one in this case, how would you grab each id of every incident?
+1. Once you have the ID of each incident you want to use it for another GET request
+1. Let's say you want to query a GET request for every ID to https://api.pagerduty.com/incidents/{id}/log_entries
+1. From each of those payloads you want to search for the string "Restart" in the summary section 
+1. If the string "Restart" is in the payload, then run a script that prints "Horray!!"
+1. If not, then exit
