@@ -48,3 +48,4 @@ Once ran, you will get fields/payloads for example:
 1. Let's say you want to query a GET request for every ID to https://api.pagerduty.com/incidents/{id}/log_entries
 1. From each of those payloads you want to search for the string "Restart" in the summary section 
 1. If the string "Restart" is in the payload, then run a script that prints "Horray!!"
+1. If not, then exit
